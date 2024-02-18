@@ -3,6 +3,11 @@
     gap: 10rem;
 }
 
+.logo {
+    width: 5rem;
+    height: 3rem;
+}
+
 /* footer */
 .footer {
     position: absolute;

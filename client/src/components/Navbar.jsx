@@ -14,12 +14,16 @@ const Navbar = () => {
   return (
     <div>
         <div className='links'>
-            <Link to="/">Products</Link>
+          <img className='logo' src="https://w7.pngwing.com/pngs/621/196/png-transparent-e-commerce-logo-logo-e-commerce-electronic-business-ecommerce-angle-text-service.png" alt="" />
+
+            { auth ? <> <Link to="/">Products</Link>
             <Link to="/add">Add Product</Link>
             <Link to="/update">Update Product</Link>
             <Link to="/profile">Profile</Link>
-            { auth ? <Link onClick={logout} to="/signup">Logout</Link> : <Link to="/signup">Sign Up</Link> }
-
+             <Link onClick={logout} to="/signup">Logout- {JSON.parse(auth).name}</Link> </>
+              : 
+             <> <Link to="/signup">Sign Up</Link> <Link to="/login">Login</Link> </> }
+ 
         </div>
         
     </div>
